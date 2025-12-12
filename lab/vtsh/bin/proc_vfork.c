@@ -1,6 +1,8 @@
 // bin/proc_vfork.c
-#define _POSIX_C_SOURCE 200809L
+#define _GNU_SOURCE  /* ИЛИ */
+#define _DEFAULT_SOURCE
 
+#define _POSIX_C_SOURCE 200809L
 #include <errno.h>
 #include <stdio.h>
 #include <stdlib.h>
