@@ -5,9 +5,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <sys/types.h>
 #include <sys/wait.h>
 #include <time.h>
 #include <unistd.h>
+
+
 
 static void usage(const char *prog) {
     fprintf(stderr, "Usage: %s -n <num_processes>\n", prog);
