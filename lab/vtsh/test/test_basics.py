@@ -37,4 +37,3 @@ class TestShellBasics(BaseShellTest):
     def test_invalid_paths(self):
         self.execute("cat /sys/proc/foo/bar", "")
         self.execute("foobar", "Command not found")
-
