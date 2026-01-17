@@ -172,11 +172,13 @@ int vtpc_open(const char* path, int mode, int access) {
         return -1;
     }
 
+#ifdef F_NOCACHE
     if (fcntl(sys_fd, F_NOCACHE, 1) == -1) {
         perror("fcntl(F_NOCACHE) failed");
         close(sys_fd);
         return -1;
     }
+#endif
 
 
     open_files[v_fd].is_open = 1;
